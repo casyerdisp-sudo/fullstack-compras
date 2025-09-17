@@ -1,0 +1,14 @@
+{
+  "name": "FullStack-Compras",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "docker compose build",
+  "forwardPorts": [1433, 8000, 5000],
+  "portsAttributes": {
+    "8000": { "label": "FastAPI" },
+    "5000": { "label": "Blazor UI" },
+    "1433": { "label": "SQL Server" }
+  }
+}
